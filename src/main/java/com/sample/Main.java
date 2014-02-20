@@ -7,7 +7,7 @@ import static org.apache.commons.lang.RandomStringUtils.randomAlphanumeric;
  */
 public class Main {
     public static void main(String[] args) {
-        System.out.println("dfas");
+        System.out.println("Hello");
 
         String a = randomAlphanumeric(5);
 
