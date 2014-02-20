@@ -14,6 +14,7 @@ public class Main {
 //        Integer.parseInt(a);
 //        System.out.println(a);
 //        System.out.println("hello");
+        long startTime = System.currentTimeMillis();
         AVLTree tree = new AVLTree();
         tree.insert(Integer.parseInt(randomNumeric(2)));
         tree.insert(Integer.parseInt(randomNumeric(2)));
@@ -32,7 +33,10 @@ public class Main {
         tree.insert(Integer.parseInt(randomNumeric(2)));
         tree.insert(Integer.parseInt(randomNumeric(2)));
         tree.insert(Integer.parseInt(randomNumeric(2)));
-        tree.display();
+    //    tree.display();
+        long endTime = System.currentTimeMillis();
+        long totalTime = endTime - startTime;
+        System.out.println(totalTime);
 
 
     }
