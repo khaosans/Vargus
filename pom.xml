@@ -23,25 +23,14 @@
       <!-- or whatever the latest version is -->
     </dependency>
     <dependency>
-      <groupId>net.unto.twitter</groupId>
-      <artifactId>java-twitter</artifactId>
-      <version>0.9-SNAPSHOT</version>
-    </dependency>
-    <dependency>
       <groupId>com.sun.jersey</groupId>
       <artifactId>jersey-core</artifactId>
       <version>1.9.1</version>
     </dependency>
     <dependency>
-      <groupId>org.twitter4j</groupId>
-      <artifactId>twitter4j-core</artifactId>
-      <version>[3.0,)</version>
-    </dependency>
-    <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.11</version>
-      <scope>test</scope>
     </dependency>
   </dependencies>
   <build>
