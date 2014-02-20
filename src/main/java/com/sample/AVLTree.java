@@ -115,12 +115,7 @@ public class AVLTree {
         return rotateLeft(current);
     }
 
-    /**
-     * first left child with its left child
-     * @param current is new right child
-     *
-     * @return new root
-     */
+
     private Node doubleRight(Node node1) {
         node1.right = rotateLeft(node1.right);
         return rotateRight(node1);
