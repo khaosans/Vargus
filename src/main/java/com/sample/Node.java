@@ -6,21 +6,21 @@ package com.sample;
 public class Node {
     protected Node left;
     protected Node right;
-    protected destination data;
+    protected int data;
     protected int height;
     //Constructor
     public Node() {
-        this.data = null;
+        this.data = 0;
         this.left = null;
         this.right = null;
         this.height = 0;
     }
     //wrap up function
-    public Node(destination to_add){
+    public Node(int to_add){
         this(to_add, null, null);
     }
     //constructor with argument
-    public Node(destination to_add, Node to_left, Node to_right) {
+    public Node(int to_add, Node to_left, Node to_right) {
         data = to_add;
         left = to_left;
         right = to_right;

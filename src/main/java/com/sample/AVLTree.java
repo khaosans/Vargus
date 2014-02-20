@@ -11,12 +11,12 @@ public class AVLTree {
         root = null;
     }
     //constructor with argument
-    public AVLTree(destination to_add){
-        root.data = to_add;
-        root.left = null;
-        root.right = null;
-    }
-    //function check the empty tree or not
+//    public AVLTree(int to_add){
+//        root.data = to_add;
+//        root.left = null;
+//        root.right = null;
+//    }
+//    function check the empty tree or not
     public boolean isEmpty() {
         return root == null;
     }
@@ -38,7 +38,7 @@ public class AVLTree {
 	 * Insert into the tree; duplicates are ignored. x the item to insert.
 	 */
 
-    public void insert(destination x) {
+    public void insert(int x) {
         root = insert(x, root);
     }
 
@@ -47,25 +47,25 @@ public class AVLTree {
 	 * roots the subtree. return the new root of the subtree.
 	 */
 
-    private Node insert(destination x, Node t) {
+    private Node insert(int x, Node t) {
         // root is null
         if (t == null)
-            return new Node(x, null, null);
+            return t = new Node(x);
         else {
-            if (x.id < t.data.id) {
+            if (x < t.data) {
                 t.left = insert(x, t.left);
                 if(height(t.left)- height(t.right) == 2){
-                    if(x.id < t.left.data.id){
+                    if(x < t.left.data){
                         t = rotateLeft(t);
                     }
                     else{
                         t = doubleLeft(t);
                     }
                 }
-            } else if (x.id > t.data.id) {
+            } else if (x > t.data) {
                 t.right = insert(x, t.right);
                 if(height(t.right)- height(t.left) == 2){
-                    if(x.id > t.right.data.id){
+                    if(x > t.right.data){
                         t = rotateRight(t);
                     }
                     else{
@@ -122,8 +122,8 @@ public class AVLTree {
      * @return new root
      */
     private Node doubleRight(Node node1) {
-        Node1.right = rotateLeft(Node1.right);
-        return rotateRight(Node1);
+        node1.right = rotateLeft(node1.right);
+        return rotateRight(node1);
     }
 
     //wrap up function display in sorted order
@@ -139,7 +139,7 @@ public class AVLTree {
     {
         if (t != null) {
             display(t.left);
-            System.out.println(t.data.display());
+            System.out.println(t.data);
             display(t.right);
         }
     }

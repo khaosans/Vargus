@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6442e48-ca44-4ad5-9541-47d990e41ad7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sample/AVLTree.java" afterPath="$PROJECT_DIR$/src/main/java/com/sample/AVLTree.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sample/Main.java" afterPath="$PROJECT_DIR$/src/main/java/com/sample/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sample/Node.java" afterPath="$PROJECT_DIR$/src/main/java/com/sample/Node.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sampleMaven.iml" afterPath="$PROJECT_DIR$/sampleMaven.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mavenDemo.iws" />
@@ -82,11 +78,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sample/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="334" selection-end="334" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
-              <folding />
+            <state line="34" column="23" selection-start="1458" selection-end="1458" vertical-scroll-proportion="0.86587435" vertical-offset="0" max-vertical-offset="675">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -94,16 +92,16 @@
       <file leaf-file-name="Node.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sample/Node.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="22" selection-start="360" selection-end="360" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
+            <state line="12" column="21" selection-start="241" selection-end="241" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AVLTree.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AVLTree.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sample/AVLTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="125" column="21" selection-start="3402" selection-end="3402" vertical-scroll-proportion="0.4017094" vertical-offset="1593" max-vertical-offset="2295">
+            <state line="125" column="34" selection-start="3369" selection-end="3369" vertical-scroll-proportion="-5.5" vertical-offset="1732" max-vertical-offset="2295">
               <folding />
             </state>
           </provider>
@@ -142,11 +140,11 @@
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/sample/MainTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sample/AVL.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sample/node.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sample/Node.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sample/AVLTree.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sample/Main.java" />
       </list>
     </option>
   </component>
@@ -623,14 +621,14 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32867134" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32739726" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22294022" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15616438" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15479451" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -668,7 +666,9 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="0" selection-start="325" selection-end="325" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="345">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -689,7 +689,9 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="5" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="345">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -710,7 +712,9 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="0" selection-start="333" selection-end="333" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="345">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -731,7 +735,9 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="0" selection-start="333" selection-end="333" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="345">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -752,7 +758,9 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="39" selection-start="710" selection-end="710" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="900">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -773,7 +781,9 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="0" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="285">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -794,7 +804,9 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="23" selection-start="222" selection-end="222" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="330">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -815,7 +827,9 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="23" selection-start="222" selection-end="222" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="330">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -836,7 +850,9 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="26" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="240">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -910,24 +926,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="334" selection-end="334" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sample/Node.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="22" selection-start="360" selection-end="360" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
+        <state line="12" column="21" selection-start="241" selection-end="241" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sample/AVLTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="21" selection-start="3402" selection-end="3402" vertical-scroll-proportion="0.4017094" vertical-offset="1593" max-vertical-offset="2295">
+        <state line="125" column="34" selection-start="3369" selection-end="3369" vertical-scroll-proportion="-5.5" vertical-offset="1732" max-vertical-offset="2295">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="23" selection-start="1458" selection-end="1458" vertical-scroll-proportion="0.86587435" vertical-offset="0" max-vertical-offset="675">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
