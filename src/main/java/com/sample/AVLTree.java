@@ -144,4 +144,20 @@ public class AVLTree {
         }
     }
 
+    private Node find(int toFind, Node root){
+        while(root!=null){
+            if(toFind.compareTo(root.data) <0){
+                root = root.left;
+            }
+            else if(toFind.compareTo(root.data) >0){
+                root = root.right;
+            }
+            else
+                return root;
+        }
+    public boolean find(int toFind){
+        return (toFind == find(toFind, root).data);
+    }
+    }
+
 }
