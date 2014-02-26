@@ -12,6 +12,5 @@ import static org.apache.commons.lang.RandomStringUtils.randomNumeric;
 public class MainTest {
     @Test
     public void testTest() throws Exception{
-
     }
 }
