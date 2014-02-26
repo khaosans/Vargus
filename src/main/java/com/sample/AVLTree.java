@@ -144,4 +144,45 @@ public class AVLTree {
         }
     }
 
+    //Removes a node from the tree, if it is existent.
+    public void remove(int toRemove) {
+        // First we must find the node, after this we can delete it.
+        removeAVL(this.root,toRemove);
+    }
+
+    public void removeAVL(Node root,int toRemove) {
+        if(root==null) {
+            // der Wert existiert nicht in diesem Baum, daher ist nichts zu tun
+            return;
+        } else {
+            if(root.data>toRemove)  {
+                removeAVL(root.left,toRemove);
+            } else if(root.data<toRemove) {
+                removeAVL(root.right, toRemove);
+            } else if(root.data==toRemove) {
+                // we found the node in the tree.. now lets go on!
+                removeFoundNode(root);
+            }
+        }
+    }
+
+    public void removeFoundNode(Node q) {
+        Node r;
+        // at least one child of q, q will be removed directly
+        if(q.left==null || q.right==null) {
+            // the root is deleted
+            if(q.parent==null) {
+                this.root=null;
+                q=null;
+                return;
+            }
+            r = q;
+        } else {
+            // q has two children --> will be replaced by successor
+            r = successor(q);
+            q.key = r.key;
+        }
+
+
+
 }
