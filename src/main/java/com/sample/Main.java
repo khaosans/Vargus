@@ -24,6 +24,7 @@ public class Main {
         tree.display();
         tree.remove(14);
         tree.display();
+        System.out.println(tree.find(16));
 //        tree.insert(Integer.parseInt(randomNumeric(2)));
 //        tree.insert(Integer.parseInt(randomNumeric(2)));
 //        tree.insert(Integer.parseInt(randomNumeric(2)));
