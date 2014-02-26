@@ -112,7 +112,7 @@ public class AVLTree {
         if (node == null) ;
         else if (toRemove < node.data){
             node.left = remove(toRemove,node.left);
-            node.balance = height(node.right)- height(node.left);
+            node.balance = height(node.right) - height(node.left);
             if (node.balance==2){
                 if (node.right.balance!=-1)
                     node=rotateLeft(node);
