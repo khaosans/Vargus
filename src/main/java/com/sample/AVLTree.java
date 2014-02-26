@@ -87,7 +87,6 @@ public class AVLTree {
         return rotateRight(node1);
     }
 
-
     public void display() {
         if (isEmpty())
             System.out.println("Empty tree");
