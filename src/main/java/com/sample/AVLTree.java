@@ -195,25 +195,17 @@ public class AVLTree {
         else
             return successor(node.left);
     }
-/*
+
     public boolean find(int toFind){
         return find(root, toFind);
     }
 
-    private boolean find(Node node,int toFind) {
-//       boolean find ;
-        if(node == null)
+    private boolean find(Node t,int toFind)
+    {
+        if( t == null )
             return false;
-        if(node.data>toFind)
-                find(node.left,toFind);
-        if(node.data<toFind)
-                find(node.right, toFind);
-        if(node.data==toFind)
-            return true;
-
-
-//        return find;
+        if( toFind < t.data )
+            return find(t.left, toFind);
+        else return toFind <= t.data || find(t.right, toFind);
     }
-*/
-
 }
