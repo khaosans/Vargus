@@ -3,6 +3,7 @@ package com.sample;
 import junit.framework.TestCase;
 import org.junit.Test;
 
+import java.util.Arrays;
 import java.util.Stack;
 
 import static org.apache.commons.lang.RandomStringUtils.randomNumeric;
@@ -12,6 +13,8 @@ import static org.apache.commons.lang.RandomStringUtils.randomNumeric;
  */
 public class AVLTreeTest extends TestCase {
     private AVLTree aTree;
+    final public int SIZEOFTREE = 30;
+    final public int NUMBERSIZE = 4;
 
     public void initTree(){
         aTree = new AVLTree();
@@ -21,44 +24,55 @@ public class AVLTreeTest extends TestCase {
     public void testIsEmpty() throws Exception {
         initTree();
         assertTrue(aTree.isEmpty());
-        aTree.insert(Integer.parseInt(randomNumeric(3)));
+        aTree.insert(Integer.parseInt(randomNumeric(NUMBERSIZE)));
         assertFalse(aTree.isEmpty());
-    }
-
-    public void testName() throws Exception {
-
     }
 
     @Test
     public void testInsert() throws Exception {
         initTree();
-        Stack<Integer> stack = new Stack<Integer>();
+        Stack<Integer> stack1 = new Stack<Integer>();
         Stack<Integer> stack2 = new Stack<Integer>();
+        int number;
 
-        int number=0;
-        for (int i=0; i<20;++i){
-            number = Integer.parseInt(randomNumeric(6));
-            stack.push(number);
+        for (int i=0; i<SIZEOFTREE;++i){
+            number = Integer.parseInt(randomNumeric(NUMBERSIZE));
+            stack1.push(number);
             stack2.push(number);
-            aTree.insert(stack.pop());
+            aTree.insert(stack1.pop());
         }
-        for (int i=0; i<20;++i){
+        for (int i=0; i<SIZEOFTREE;++i){
             assertTrue(aTree.find(stack2.pop()));
         }
     }
 
     @Test
-    public void testDisplay() throws Exception {
-
-    }
-
-    @Test
     public void testRemove() throws Exception {
+        initTree();
+        Stack<Integer> stack1 = new Stack<Integer>();
+        Stack<Integer> stack2 = new Stack<Integer>();
+        int number,valueToFind;
 
+        for (int i=0; i<SIZEOFTREE;++i){
+            number = Integer.parseInt(randomNumeric(NUMBERSIZE));
+            stack1.push(number);
+            stack2.push(number);
+            aTree.insert(stack1.pop());
+        }
+        //Less one for empty tree
+        for (int j=0; j<SIZEOFTREE-1;++j){
+            valueToFind = stack2.pop();
+            aTree.remove(valueToFind);
+            assertFalse(aTree.find(valueToFind));
+        }
+        System.out.println("last number on stack: "+stack2.peek());
+        System.out.println("Print the Tree here");
+        aTree.display();
+        System.out.println("Try to remove the last number here");
+        aTree.remove(stack1.peek());
     }
 
     @Test
     public void testFind() throws Exception {
-
     }
 }
