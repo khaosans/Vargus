@@ -29,7 +29,7 @@ public class AVLTreeTest extends TestCase {
 
         int number=0;
         for (int i=0; i<20;++i){
-            number = Integer.parseInt(randomNumeric(30));
+            number = Integer.parseInt(randomNumeric(4));
             stack.push(number);
             stack2.push(number);
             aTree.insert(stack.pop());
