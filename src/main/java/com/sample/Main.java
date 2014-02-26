@@ -9,22 +9,22 @@ import static org.apache.commons.lang.RandomStringUtils.randomNumeric;
 public class Main {
     public static void main(String[] args) {
 
-        long startTime = System.currentTimeMillis();
+//        long startTime = System.currentTimeMillis();
         AVLTree tree = new AVLTree();
-        tree.insert(3);
-        tree.insert(2);
-        tree.insert(1);
-        tree.insert(4);
-        tree.insert(5);
-        tree.insert(6);
-        tree.insert(7);
-        tree.insert(16);
-        tree.insert(15);
+//        tree.insert(3);
+//        tree.insert(2);
+//        tree.insert(1);
+//        tree.insert(4);
+//        tree.insert(5);
+//        tree.insert(6);
+//        tree.insert(7);
+//        tree.insert(16);
+//        tree.insert(15);
         tree.insert(14);
         tree.display();
-        tree.remove(14);
+//        tree.remove(14);
         tree.display();
-        System.out.println(tree.find(16));
+//        System.out.println(tree.find(16));
 //        tree.insert(Integer.parseInt(randomNumeric(2)));
 //        tree.insert(Integer.parseInt(randomNumeric(2)));
 //        tree.insert(Integer.parseInt(randomNumeric(2)));
@@ -32,9 +32,9 @@ public class Main {
 //        tree.insert(Integer.parseInt(randomNumeric(2)));
 //        tree.insert(Integer.parseInt(randomNumeric(2)));
 //        tree.insert(Integer.parseInt(randomNumeric(2)));
-        long endTime = System.currentTimeMillis();
-        long totalTime = endTime - startTime;
-        System.out.println(totalTime);
+//        long endTime = System.currentTimeMillis();
+//        long totalTime = endTime - startTime;
+//        System.out.println(totalTime);
 
 
     }
