@@ -34,7 +34,11 @@ public class AVLTreeTest extends TestCase {
         Stack<Integer> stack1 = new Stack<Integer>();
         Stack<Integer> stack2 = new Stack<Integer>();
         int number;
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> b945fcc4ff4c4b000e86b546e39a5da8acb97973
         for (int i=0; i<SIZEOFTREE;++i){
             number = Integer.parseInt(randomNumeric(NUMBERSIZE));
             stack1.push(number);
