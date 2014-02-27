@@ -29,4 +29,19 @@ public class HashTable {
                 table[index].display();
         }
     }
+
+    public boolean find(int toFind){
+        int index = toFind % size;
+        if (table[index] == null) return false;
+        else return table[index].find(toFind);
+    }
+
+    public void remove(int toRemove){
+        int index = toRemove % size;
+        if (table[index] == null) ;
+        else {
+            if(table[index].sizeLinkedList() == 1) table[index] = null;
+            else table[index].remove(toRemove);
+        }
+    }
 }

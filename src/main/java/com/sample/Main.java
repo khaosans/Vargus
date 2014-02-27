@@ -36,6 +36,16 @@ public class Main {
 //        long totalTime = endTime - startTime;
 //        System.out.println(totalTime);
 
+        LinkedList list = new LinkedList();
+        list.insert(1);
+        list.insert(2);
+        list.insert(3);
+        list.insert(4);
+        list.display();
+        list.remove(3);
+        list.display();
+        System.out.println("Size of LLL" + list.sizeLinkedList());
+
 
         HashTable table = new HashTable();
         table.insert(0);
@@ -63,6 +73,7 @@ public class Main {
         table.insert(40);
         table.insert(60);
         table.display();
+
 
 
     }

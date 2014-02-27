@@ -41,8 +41,9 @@ public class LinkedList {
         return find(toFind, node.next);
     }
 
-    public void remove(int toRemove){
-        remove(toRemove, head);
+    public LinkedListNode remove(int toRemove){
+        head = remove(toRemove, head);
+        return head;
     }
 
     private LinkedListNode remove(int toRemove, LinkedListNode node){
@@ -51,9 +52,19 @@ public class LinkedList {
             if (node.next == null) //only one node
                 head = null;
             else if(node.next != null){
-                node = remove(toRemove, node.next);
+//                node = remove(toRemove, node.next);
+                return node.next;
             }
         }
-        return node;
+        return remove(toRemove, node.next);
+    }
+
+    public int sizeLinkedList(){
+        return sizeLinkedList(head);
+    }
+
+    private  int sizeLinkedList(LinkedListNode node){
+        if (node == null) return 0;
+        return 1 + sizeLinkedList(node.next);
     }
 }
