@@ -10,8 +10,8 @@ public class Main {
     public static void main(String[] args) {
 
 //        long startTime = System.currentTimeMillis();
-        AVLTree tree = new AVLTree();
-        tree.insert(3);
+//        AVLTree tree = new AVLTree();
+//        tree.insert(3);
 //        tree.insert(2);
 //        tree.insert(1);
 //        tree.insert(4);
@@ -21,9 +21,9 @@ public class Main {
 //        tree.insert(16);
 //        tree.insert(15);
 //        tree.insert(14);
-        tree.display();
-        tree.remove(3);
-        tree.display();
+//        tree.display();
+//        tree.remove(3);
+//        tree.display();
 //        System.out.println(tree.find(16));
 //        tree.insert(Integer.parseInt(randomNumeric(2)));
 //        tree.insert(Integer.parseInt(randomNumeric(2)));
@@ -36,14 +36,14 @@ public class Main {
 //        long totalTime = endTime - startTime;
 //        System.out.println(totalTime);
 
-//        LinkedHashEntry list = new LinkedHashEntry();
-//        list.insert(1);
-//        list.insert(2);
-//        list.insert(3);
-//        list.insert(2);
-//        list.insert(4);
-//        list.insert(5);
-//        list.insert(2);
-//        list.display();
+        LinkedHashEntry list = new LinkedHashEntry();
+        list.insert(1);
+        list.insert(2);
+        list.insert(3);
+        list.insert(2);
+        list.insert(4);
+        list.insert(5);
+        list.insert(2);
+        list.display();
     }
 }

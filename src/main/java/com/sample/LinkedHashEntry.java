@@ -5,6 +5,7 @@ package com.sample;
  */
 public class LinkedHashEntry {
 
+    /*
     private int data;
     private LinkedHashEntry next;
 
@@ -55,6 +56,40 @@ public class LinkedHashEntry {
             head = head.next;
         }
     }
+    */
+    protected LinkedNode head;
+
+    public LinkedHashEntry(){
+        head = null;
+    }
+    public LinkedHashEntry(int toAdd){
+        head.data = toAdd;
+        head.next = null;
+    }
+
+    public void insert(int toAdd){
+        if(head == null){
+            head = new LinkedNode(toAdd);
+        }
+        else{
+            LinkedNode temp = head;
+            head = new LinkedNode(toAdd);
+            head.next = temp;
+        }
+    }
+    public void display(){
+        if(head == null) return;
+        else{
+            LinkedNode temp = head;
+            while(temp.next != null){
+            System.out.println(temp.data);
+            temp = temp.next;
+            }
+        }
+
+
+    }
+
 
 
 

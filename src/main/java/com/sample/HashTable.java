@@ -4,6 +4,7 @@ package com.sample;
  * Created by locle on 2/26/14.
  */
 public class HashTable {
+    /*
     private final static int TABLE_SIZE = 20;
 
     LinkedHashEntry[] table;
@@ -28,7 +29,7 @@ public class HashTable {
                 return entry.getData();
         }
     }
-*/
+
     public void insert(int data) {
         int index = (data % TABLE_SIZE);
         if (table[index] == null){
@@ -75,4 +76,5 @@ public class HashTable {
             }
         }
     }
+*/
 }
