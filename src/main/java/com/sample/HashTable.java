@@ -33,7 +33,6 @@ public class HashTable {
         int index = (data % TABLE_SIZE);
         if (table[index] == null){
             table[index] = new LinkedHashEntry(data);
-            table[index].setData(data);
         }
         else {
             LinkedHashEntry entry = table[index];
@@ -62,6 +61,16 @@ public class HashTable {
                 else{
                     prevEntry.setNext(entry.getNext());
                     table[index] = prevEntry;
+                }
+            }
+        }
+    }
+
+    public void display(){
+        for(int index = 0; index < TABLE_SIZE; ++index){
+            if(table[index] != null){
+                while (table[index].getNext() != null){
+                    System.out.println(table[index].getData());
                 }
             }
         }

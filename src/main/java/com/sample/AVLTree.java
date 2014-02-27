@@ -142,8 +142,10 @@ public class AVLTree {
             }
         }
         else if (node.data == toRemove){
-            if (node.left == null && node.right == null)
+            if (node.left == null && node.right == null){
                 node = null;
+                root = null;
+            }
             else if (node.left == null){
                 node.right.parent = node.parent;
                 node = node.right;
