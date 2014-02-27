@@ -34,18 +34,10 @@ public class AVLTreeTest extends TestCase {
         Stack<Integer> stack1 = new Stack<Integer>();
         Stack<Integer> stack2 = new Stack<Integer>();
         int number;
-
-<<<<<<< HEAD
+        
         for (int i=0; i<SIZEOFTREE;++i){
             number = Integer.parseInt(randomNumeric(NUMBERSIZE));
             stack1.push(number);
-=======
-        int number=0;
-        for (int i=0; i<20;++i){
-            number = Integer.parseInt(randomNumeric(6));
-
-            stack.push(number);
->>>>>>> origin/hash_table
             stack2.push(number);
             aTree.insert(stack1.pop());
         }
