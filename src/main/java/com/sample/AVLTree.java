@@ -1,5 +1,8 @@
 package com.sample;
 
+import static java.lang.Math.min;
+import static java.lang.StrictMath.max;
+
 /**
  * Created by locle on 2/19/14.
  */
@@ -208,5 +211,79 @@ public class AVLTree {
         if( toFind < t.data )
             return find(t.left, toFind);
         else return toFind <= t.data || find(t.right, toFind);
+    }
+
+    public boolean isBST(){
+        return isBST(root);
+    }
+
+    public boolean isBST(Node node)
+    {
+        //  true for empty tree
+        if(node == null)
+        {
+            return true;
+        }
+
+        //  false if the max of the left is > than current data
+        if(node.left != null && maxValue(node.left) > node.data)
+        {
+            return false;
+        }
+
+        //  false if the min of the right is <= than current data
+        if(node.right != null && minValue(node.right) <= node.data)
+        {
+            return false;
+        }
+        //  false if, recursively, the left or right is not a BST
+        if(!isBST(node.left) || !isBST(node.right))
+        {
+            return false;
+        }
+
+        //  passing all that, it's a BST
+        return true;
+    }
+
+    public int maxValue(Node node)
+    {
+        while(node.right != null)
+        {
+            node = node.right;
+        }
+        return node.data;
+    }
+
+    public int minValue(Node node)
+    {
+        while(node.left != null)
+        {
+            node = node.left;
+        }
+        return node.data;
+    }
+
+    public boolean isBalanced(){
+        return isBalanced(root);
+    }
+
+    public boolean isBalanced(Node root)
+    {
+        return (maxDepth(root) - minDepth(root) <= 1);
+    }
+
+    public int maxDepth(Node root)
+    {
+        if (root == null) return 0;
+
+        return 1 + max(maxDepth(root.left), maxDepth(root.right));
+    }
+
+    public int minDepth (Node root)
+    {
+        if (root == null) return 0;
+
+        return 1 + min(minDepth(root.left), minDepth(root.right));
     }
 }

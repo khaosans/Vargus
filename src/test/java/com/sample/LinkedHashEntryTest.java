@@ -12,6 +12,7 @@ import static org.apache.commons.lang.RandomStringUtils.randomNumeric;
  */
 public class LinkedHashEntryTest extends TestCase {
     private LinkedHashEntry lllist;
+    private int numberSize = 4;
 
     public void initList(){
         lllist = new LinkedHashEntry();
@@ -24,7 +25,7 @@ public class LinkedHashEntryTest extends TestCase {
 
         int number = 0;
         for (int index=0; index<20; ++index){
-            number = Integer.parseInt(randomNumeric(4));
+            number = Integer.parseInt(randomNumeric(numberSize));
             stack1.push(number);
             stack2.push(number);
         }
