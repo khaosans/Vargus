@@ -76,7 +76,7 @@ public class AVLTreeTest extends TestCase {
         initTree();
         Stack<Integer> stack1 = new Stack<Integer>();
         Stack<Integer> stack2 = new Stack<Integer>();
-        int number,valueToFind;
+        int number;
 
         for (int i=0; i<SIZEOFTREE;++i){
             number = Integer.parseInt(randomNumeric(NUMBERSIZE));
@@ -94,7 +94,7 @@ public class AVLTreeTest extends TestCase {
         initTree();
         Stack<Integer> stack1 = new Stack<Integer>();
         Stack<Integer> stack2 = new Stack<Integer>();
-        int number,valueToFind;
+        int number;
 
         for (int i=0; i<SIZEOFTREE;++i){
             number = Integer.parseInt(randomNumeric(NUMBERSIZE));
