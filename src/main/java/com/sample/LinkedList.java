@@ -52,11 +52,15 @@ public class LinkedList {
             if (node.next == null) //only one node
                 head = null;
             else if(node.next != null){
-//                node = remove(toRemove, node.next);
-                return node.next;
+                LinkedListNode temp = node.next;
+                node = null;
+                node = temp;
+                return node;
             }
         }
-        return remove(toRemove, node.next);
+        node.next = remove(toRemove, node.next);
+        return node;
+
     }
 
     public int sizeLinkedList(){
