@@ -60,16 +60,12 @@ public class AVLTreeTest extends TestCase {
             aTree.insert(stack1.pop());
         }
         //Less one for empty tree
-        for (int j=0; j<SIZEOFTREE-1;++j){
+        for (int j=0; j<SIZEOFTREE;++j){
             valueToFind = stack2.pop();
             aTree.remove(valueToFind);
             assertFalse(aTree.find(valueToFind));
         }
-        System.out.println("last number on stack: "+stack2.peek());
-        System.out.println("Print the Tree here");
-        aTree.display();
-        System.out.println("Try to remove the last number here");
-        aTree.remove(stack1.peek());
+        assertTrue(aTree.isEmpty());
     }
 
     @Test
