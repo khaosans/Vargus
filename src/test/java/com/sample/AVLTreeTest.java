@@ -3,7 +3,6 @@ package com.sample;
 import junit.framework.TestCase;
 import org.junit.Test;
 
-import java.util.Arrays;
 import java.util.Stack;
 
 import static org.apache.commons.lang.RandomStringUtils.randomNumeric;
@@ -31,18 +30,16 @@ public class AVLTreeTest extends TestCase {
     @Test
     public void testInsert() throws Exception {
         initTree();
+        initTree();
         Stack<Integer> stack1 = new Stack<Integer>();
         Stack<Integer> stack2 = new Stack<Integer>();
-        int number;
+        int number,valueToFind;
 
         for (int i=0; i<SIZEOFTREE;++i){
             number = Integer.parseInt(randomNumeric(NUMBERSIZE));
             stack1.push(number);
             stack2.push(number);
             aTree.insert(stack1.pop());
-        }
-        for (int i=0; i<SIZEOFTREE;++i){
-            assertTrue(aTree.find(stack2.pop()));
         }
     }
 
@@ -70,5 +67,43 @@ public class AVLTreeTest extends TestCase {
 
     @Test
     public void testFind() throws Exception {
+
     }
+
+
+    @Test
+    public void testInOrder() throws Exception{
+        initTree();
+        Stack<Integer> stack1 = new Stack<Integer>();
+        Stack<Integer> stack2 = new Stack<Integer>();
+        int number;
+
+        for (int i=0; i<SIZEOFTREE;++i){
+            number = Integer.parseInt(randomNumeric(NUMBERSIZE));
+            stack1.push(number);
+            stack2.push(number);
+            aTree.insert(stack1.pop());
+        }
+
+        assertTrue(aTree.isBST());
+    }
+
+    @Test
+    public void testIsBalanced() throws Exception{
+        initTree();
+        initTree();
+        Stack<Integer> stack1 = new Stack<Integer>();
+        Stack<Integer> stack2 = new Stack<Integer>();
+        int number;
+
+        for (int i=0; i<SIZEOFTREE;++i){
+            number = Integer.parseInt(randomNumeric(NUMBERSIZE));
+            stack1.push(number);
+            stack2.push(number);
+            aTree.insert(stack1.pop());
+        }
+
+        aTree.isBalanced();
+    }
+
 }
