@@ -53,17 +53,12 @@ public class LinkedListTest extends TestCase {
             stack2.push(number);
             list.insert(stack1.pop());
         }
-        /*for(int i=0;i<MAXVALUE;++i){
+        for(int i=0;i<MAXVALUE;++i){
             valueToFind = stack2.pop();
-
-            System.out.println(valueToFind);
-            System.out.println(list.find(valueToFind));
-        }*/
-
-        list.insert(52);
-        list.insert(25);
-        list.remove(52);
-        list.find(52);
+            list.remove(valueToFind);
+            assertFalse(list.find(valueToFind));
+        }
+        assertTrue(list.isEmpty());
     }
 
     @Test
