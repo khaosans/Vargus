@@ -70,7 +70,6 @@ public class AVLTreeTest extends TestCase {
 
     }
 
-
     @Test
     public void testInOrder() throws Exception{
         initTree();
@@ -105,5 +104,4 @@ public class AVLTreeTest extends TestCase {
 
         aTree.isBalanced();
     }
-
 }

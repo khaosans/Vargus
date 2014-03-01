@@ -51,9 +51,7 @@ public class HashTableTest extends TestCase {
         for(int i=0;i<MAXVALUE;++i){
             value = stack2.pop();
             hashTable.remove(value);
-
-
+            assertFalse(hashTable.find(value));
         }
-
     }
 }
