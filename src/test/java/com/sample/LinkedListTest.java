@@ -8,10 +8,10 @@ import java.util.Stack;
 import static org.apache.commons.lang.RandomStringUtils.randomNumeric;
 
 /**
- * Created by souriyakhaosanga on 2/27/14.
+ * Created by solus on 3/1/14.
  */
-public class HashTableTest extends TestCase {
-    private HashTable hashTable;
+public class LinkedListTest extends TestCase {
+    private LinkedList list;
     private int MAXVALUE = 50;
     private int NUMBERSIZE =2;
     Stack<Integer> stack1;
@@ -19,7 +19,7 @@ public class HashTableTest extends TestCase {
 
     @Test
     public void testInsert() throws Exception {
-        hashTable = new HashTable();
+        list = new LinkedList();
         stack1 = new Stack<Integer>();
         stack2 = new Stack<Integer>();
 
@@ -28,32 +28,41 @@ public class HashTableTest extends TestCase {
             number = Integer.parseInt(randomNumeric(NUMBERSIZE));
             stack1.push(number);
             stack2.push(number);
-            hashTable.insert(stack1.pop());
+            list.insert(stack1.pop());
         }
         for(int i=0;i<MAXVALUE;++i){
-            assertTrue(hashTable.find(stack2.pop()));
+            assertTrue(list.find(stack2.pop()));
         }
     }
 
     @Test
+    public void testFind() throws Exception {
+
+    }
+
+    @Test
     public void testRemove() throws Exception {
-        hashTable = new HashTable();
+        list = new LinkedList();
         stack1 = new Stack<Integer>();
         stack2 = new Stack<Integer>();
 
-        int number,value;
+        int number,valueToFind;
         for(int i=0;i<MAXVALUE;++i){
             number = Integer.parseInt(randomNumeric(NUMBERSIZE));
             stack1.push(number);
             stack2.push(number);
-            hashTable.insert(stack1.pop());
+            list.insert(stack1.pop());
         }
         for(int i=0;i<MAXVALUE;++i){
-            value = stack2.pop();
-            hashTable.remove(value);
-
-
+            valueToFind = stack2.pop();
+            list.remove(valueToFind);
+            assertFalse(list.find(valueToFind));
         }
+        assertTrue(list.isEmpty());
+    }
+
+    @Test
+    public void testSizeLinkedList() throws Exception {
 
     }
 }
