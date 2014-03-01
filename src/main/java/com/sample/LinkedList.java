@@ -26,7 +26,7 @@ public class LinkedList {
         else display(head);
     }
     private void display(LinkedListNode node){
-        if(node != null){
+        if(node!=null){
             System.out.println(node.data);
             display(node.next);
         }
@@ -49,8 +49,11 @@ public class LinkedList {
     private LinkedListNode remove(int toRemove, LinkedListNode node){
         if(node == null) ;
         else if (node.data == toRemove){
-            if (node.next == null) //only one node
+            if (node.next == null){ //only one node
+                node = null;
                 head = null;
+                return node;
+            }
             else if(node.next != null){
                 LinkedListNode temp = node.next;
                 node = null;
@@ -70,5 +73,9 @@ public class LinkedList {
     private  int sizeLinkedList(LinkedListNode node){
         if (node == null) return 0;
         return 1 + sizeLinkedList(node.next);
+    }
+
+    public boolean isEmpty(){
+        return head==null;
     }
 }
