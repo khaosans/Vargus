@@ -15,6 +15,10 @@ public class MainTest extends AVLTree {
     private static int [] array;
     private static int maxValue;
     @Test
+    public void testMain(){
+
+    }
+    @Test
     public void testTest() throws Exception{
 
         buildArray();
@@ -23,7 +27,7 @@ public class MainTest extends AVLTree {
         Stack<Integer> stack = new Stack();
         Stack<Integer> copy = new Stack();
 
-        for(int i = 0; i<20000;++i){
+        for(int i = 0; i<maxValue;++i){
             AVLTree tree = new AVLTree();
             stack.push(array[i]);
             copy.push(array[i]);
@@ -42,10 +46,10 @@ public class MainTest extends AVLTree {
     }
 
     public static int[] randomizeArray(int[] array){
-        Random rgen = new Random();  // Random number generator
+        Random regen = new Random();  // Random number generator
 
         for (int i=0; i<array.length; i++) {
-            int randomPosition = rgen.nextInt(array.length);
+            int randomPosition = regen.nextInt(array.length);
             int temp = array[i];
             array[i] = array[randomPosition];
             array[randomPosition] = temp;
@@ -53,4 +57,5 @@ public class MainTest extends AVLTree {
 
         return array;
     }
+
 }
