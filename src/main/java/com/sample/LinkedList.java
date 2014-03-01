@@ -15,7 +15,7 @@ public class LinkedList {
     }
     private LinkedListNode insert(int toAdd, LinkedListNode head) {
         if(head == null) head = new LinkedListNode(toAdd);
-        else if(find(toAdd, head) == false)
+        else if(!find(toAdd, head))
             head.next = insert(toAdd, head.next);
         return  head;
     }
@@ -50,18 +50,17 @@ public class LinkedList {
         if(node == null) ;
         else if (node.data == toRemove){
             if (node.next == null){ //only one node
-                node = null;
                 head = null;
-                return node;
+                return null;
             }
-            else if(node.next != null){
-                LinkedListNode temp = node.next;
-                node = null;
-                node = temp;
+            else {
+                node = node.next;
                 return node;
             }
         }
-        node.next = remove(toRemove, node.next);
+        if(node !=null && node.next != null) {
+            node.next = remove(toRemove, node.next);
+        }
         return node;
 
     }
