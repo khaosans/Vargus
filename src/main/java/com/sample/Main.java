@@ -1,10 +1,5 @@
 package com.sample;
 
-import com.sample.performance.AVLPerf;
-
-import static org.apache.commons.lang.RandomStringUtils.randomAlphanumeric;
-import static org.apache.commons.lang.RandomStringUtils.randomNumeric;
-
 /**
  * Created by souriyakhaosanga on 2/5/14.
  */

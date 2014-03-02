@@ -20,10 +20,12 @@ public class Node {
         this.height = 0;
         this.balance = 0;
     }
+
     //wrap up function
-    public Node(int to_add){
+    public Node(int to_add) {
         this(to_add, null, null);
     }
+
     //constructor with argument
     public Node(int to_add, Node to_left, Node to_right) {
         data = to_add;

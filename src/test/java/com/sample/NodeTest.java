@@ -10,10 +10,11 @@ import static org.apache.commons.lang.RandomStringUtils.randomNumeric;
  */
 public class NodeTest extends TestCase {
     private Node aNode;
+
     @Test
-    public void testNode() throws Exception{
+    public void testNode() throws Exception {
         int number = Integer.parseInt(randomNumeric(4));
-        aNode = new Node(number,null,null);
-        assertEquals(number,aNode.data);
+        aNode = new Node(number, null, null);
+        assertEquals(number, aNode.data);
     }
 }

@@ -13,7 +13,7 @@ import static org.apache.commons.lang.RandomStringUtils.randomNumeric;
 public class HashTableTest extends TestCase {
     private HashTable hashTable;
     private int MAXVALUE = 50;
-    private int NUMBERSIZE =2;
+    private int NUMBERSIZE = 2;
     Stack<Integer> stack1;
     Stack<Integer> stack2;
 
@@ -24,13 +24,13 @@ public class HashTableTest extends TestCase {
         stack2 = new Stack<Integer>();
 
         int number;
-        for(int i=0;i<MAXVALUE;++i){
+        for (int i = 0; i < MAXVALUE; ++i) {
             number = Integer.parseInt(randomNumeric(NUMBERSIZE));
             stack1.push(number);
             stack2.push(number);
             hashTable.insert(stack1.pop());
         }
-        for(int i=0;i<MAXVALUE;++i){
+        for (int i = 0; i < MAXVALUE; ++i) {
             assertTrue(hashTable.find(stack2.pop()));
         }
     }
@@ -41,14 +41,14 @@ public class HashTableTest extends TestCase {
         stack1 = new Stack<Integer>();
         stack2 = new Stack<Integer>();
 
-        int number,value;
-        for(int i=0;i<MAXVALUE;++i){
+        int number, value;
+        for (int i = 0; i < MAXVALUE; ++i) {
             number = Integer.parseInt(randomNumeric(NUMBERSIZE));
             stack1.push(number);
             stack2.push(number);
             hashTable.insert(stack1.pop());
         }
-        for(int i=0;i<MAXVALUE;++i){
+        for (int i = 0; i < MAXVALUE; ++i) {
             value = stack2.pop();
             hashTable.remove(value);
             assertFalse(hashTable.find(value));
