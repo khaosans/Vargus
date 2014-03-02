@@ -1,16 +1,17 @@
 package com.sample;
 
-import junit.framework.TestCase;
 import org.junit.Test;
 
 import java.util.Stack;
 
+import static junit.framework.Assert.assertTrue;
+import static junit.framework.TestCase.assertFalse;
 import static org.apache.commons.lang.RandomStringUtils.randomNumeric;
 
 /**
  * Created by souriyakhaosanga on 2/25/14.
  */
-public class AVLTreeTest extends TestCase {
+public class AVLTreeTest {
     private AVLTree aTree;
     final public int SIZEOFTREE = 30;
     final public int NUMBERSIZE = 4;
@@ -27,13 +28,14 @@ public class AVLTreeTest extends TestCase {
         assertFalse(aTree.isEmpty());
     }
 
+
     @Test
     public void testInsert() throws Exception {
         initTree();
         initTree();
         Stack<Integer> stack1 = new Stack<Integer>();
         Stack<Integer> stack2 = new Stack<Integer>();
-        int number, valueToFind;
+        int number;
 
         for (int i = 0; i < SIZEOFTREE; ++i) {
             number = Integer.parseInt(randomNumeric(NUMBERSIZE));

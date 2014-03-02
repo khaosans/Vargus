@@ -1,16 +1,17 @@
 package com.sample;
 
-import junit.framework.TestCase;
 import org.junit.Test;
 
 import java.util.Stack;
 
+import static junit.framework.Assert.assertTrue;
+import static junit.framework.TestCase.assertFalse;
 import static org.apache.commons.lang.RandomStringUtils.randomNumeric;
 
 /**
  * Created by souriyakhaosanga on 2/27/14.
  */
-public class HashTableTest extends TestCase {
+public class HashTableTest {
     private HashTable hashTable;
     private int MAXVALUE = 50;
     private int NUMBERSIZE = 2;

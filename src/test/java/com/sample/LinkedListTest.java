@@ -5,12 +5,14 @@ import org.junit.Test;
 
 import java.util.Stack;
 
+import static junit.framework.Assert.assertTrue;
+import static junit.framework.TestCase.assertFalse;
 import static org.apache.commons.lang.RandomStringUtils.randomNumeric;
 
 /**
  * Created by solus on 3/1/14.
  */
-public class LinkedListTest extends TestCase {
+public class LinkedListTest {
     private LinkedList list;
     private int MAXVALUE = 50;
     private int NUMBERSIZE = 2;
