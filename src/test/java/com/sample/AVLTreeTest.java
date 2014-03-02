@@ -15,7 +15,7 @@ public class AVLTreeTest extends TestCase {
     final public int SIZEOFTREE = 30;
     final public int NUMBERSIZE = 4;
 
-    public void initTree(){
+    public void initTree() {
         aTree = new AVLTree();
     }
 
@@ -33,9 +33,9 @@ public class AVLTreeTest extends TestCase {
         initTree();
         Stack<Integer> stack1 = new Stack<Integer>();
         Stack<Integer> stack2 = new Stack<Integer>();
-        int number,valueToFind;
+        int number, valueToFind;
 
-        for (int i=0; i<SIZEOFTREE;++i){
+        for (int i = 0; i < SIZEOFTREE; ++i) {
             number = Integer.parseInt(randomNumeric(NUMBERSIZE));
             stack1.push(number);
             stack2.push(number);
@@ -48,16 +48,16 @@ public class AVLTreeTest extends TestCase {
         initTree();
         Stack<Integer> stack1 = new Stack<Integer>();
         Stack<Integer> stack2 = new Stack<Integer>();
-        int number,valueToFind;
+        int number, valueToFind;
 
-        for (int i=0; i<SIZEOFTREE;++i){
+        for (int i = 0; i < SIZEOFTREE; ++i) {
             number = Integer.parseInt(randomNumeric(NUMBERSIZE));
             stack1.push(number);
             stack2.push(number);
             aTree.insert(stack1.pop());
         }
         //Less one for empty tree
-        for (int j=0; j<SIZEOFTREE;++j){
+        for (int j = 0; j < SIZEOFTREE; ++j) {
             valueToFind = stack2.pop();
             aTree.remove(valueToFind);
             assertFalse(aTree.find(valueToFind));
@@ -71,13 +71,13 @@ public class AVLTreeTest extends TestCase {
     }
 
     @Test
-    public void testInOrder() throws Exception{
+    public void testInOrder() throws Exception {
         initTree();
         Stack<Integer> stack1 = new Stack<Integer>();
         Stack<Integer> stack2 = new Stack<Integer>();
         int number;
 
-        for (int i=0; i<SIZEOFTREE;++i){
+        for (int i = 0; i < SIZEOFTREE; ++i) {
             number = Integer.parseInt(randomNumeric(NUMBERSIZE));
             stack1.push(number);
             stack2.push(number);
@@ -88,14 +88,14 @@ public class AVLTreeTest extends TestCase {
     }
 
     @Test
-    public void testIsBalanced() throws Exception{
+    public void testIsBalanced() throws Exception {
         initTree();
         initTree();
         Stack<Integer> stack1 = new Stack<Integer>();
         Stack<Integer> stack2 = new Stack<Integer>();
         int number;
 
-        for (int i=0; i<SIZEOFTREE;++i){
+        for (int i = 0; i < SIZEOFTREE; ++i) {
             number = Integer.parseInt(randomNumeric(NUMBERSIZE));
             stack1.push(number);
             stack2.push(number);

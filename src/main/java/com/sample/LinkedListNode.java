@@ -5,15 +5,15 @@ package com.sample;
  */
 public class LinkedListNode {
 
-   protected int data;
-   protected LinkedListNode next;
+    protected int data;
+    protected LinkedListNode next;
 
-    public LinkedListNode(){
+    public LinkedListNode() {
         this.data = 0;
         this.next = null;
     }
 
-    public LinkedListNode(int toAdd){
+    public LinkedListNode(int toAdd) {
         this.data = toAdd;
         this.next = null;
     }
