@@ -19,7 +19,7 @@ public class Plot {
 
     public static void main(String[] args) {
 
-        AVLPerf avl = new AVLPerf(3, 2);
+        AVLPerf avl = new AVLPerf(10, 4);
 
 
         XYSeries series1 = new XYSeries("AVL");
@@ -46,7 +46,7 @@ public class Plot {
         plot.setBackgroundPaint(Color.white);
         plot.setDomainGridlinePaint(Color.GREEN);
         plot.setRangeGridlinePaint(Color.orange);
-        plot.setAxisOffset(new RectangleInsets(100, 0, 0, 20));
+        plot.setAxisOffset(new RectangleInsets(100, 0, 0, 200));
         plot.setDomainCrosshairVisible(true);
         plot.setRangeCrosshairVisible(true);
 
@@ -55,7 +55,7 @@ public class Plot {
         renderer.setBaseShapesFilled(true);
 
         ChartFrame frame = new ChartFrame("ChartFrame", chart);
-        frame.setSize(450, 250);
+        frame.setSize(4500, 2500);
         frame.setVisible(true);
 
     }
