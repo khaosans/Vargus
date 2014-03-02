@@ -23,8 +23,8 @@ public class MainTest extends AVLTree {
         buildArray();
         randomizeArray(array);
 
-        Stack<Integer> stack = new Stack();
-        Stack<Integer> copy = new Stack();
+        Stack<Integer> stack = new Stack<Integer>();
+        Stack<Integer> copy = new Stack<Integer>();
 
         for (int i = 0; i < maxValue; ++i) {
             AVLTree tree = new AVLTree();

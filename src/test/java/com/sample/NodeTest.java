@@ -3,12 +3,13 @@ package com.sample;
 import junit.framework.TestCase;
 import org.junit.Test;
 
+import static junit.framework.TestCase.assertEquals;
 import static org.apache.commons.lang.RandomStringUtils.randomNumeric;
 
 /**
  * Created by souriyakhaosanga on 2/25/14.
  */
-public class NodeTest extends TestCase {
+public class NodeTest {
     private Node aNode;
 
     @Test
