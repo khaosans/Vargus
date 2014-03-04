@@ -12,21 +12,23 @@ import org.jfree.ui.RectangleInsets;
 
 import java.awt.*;
 
+import static java.lang.Math.log;
+
 public class Plot {
 
     public static void main(String[] args) {
 
-        AVLPerf avl = new AVLPerf(10, 4);
+        AVLPerf avl = new AVLPerf(200, 0, 100);
 
         XYSeries series1 = new XYSeries("AVL");
-        for (int i = 0; i < avl.size; ++i){
-            series1.add(avl.timeInsert[i], avl.inputInsert[i]);
+        for (int i = 0; i < avl.numberOfRepeatTest; ++i){
+            series1.add(avl.inputInsert[i], avl.timeInsert[i]);
         }
 
         XYSeriesCollection xyDataset = new XYSeriesCollection();
         xyDataset.addSeries(series1);
 
-        JFreeChart chart = ChartFactory.createXYLineChart("TIMES", "MS", "NUMBERS", xyDataset, PlotOrientation.VERTICAL, true, false, false);
+        JFreeChart chart = ChartFactory.createXYLineChart("Times complexity", "Numbers", "Times", xyDataset, PlotOrientation.VERTICAL, true, false, false);
         chart.setBackgroundPaint(Color.yellow);
 
         XYPlot plot = (XYPlot) chart.getPlot();
@@ -44,7 +46,5 @@ public class Plot {
         ChartFrame frame = new ChartFrame("ChartFrame", chart);
         frame.setSize(4500, 2500);
         frame.setVisible(true);
-
     }
-
 }

@@ -2,10 +2,6 @@ package com.sample.performance;
 
 import com.sample.AVLTree;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.PrintWriter;
 import java.util.Stack;
 
 import static org.apache.commons.lang.RandomStringUtils.randomNumeric;
@@ -16,46 +12,30 @@ import static org.apache.commons.lang.RandomStringUtils.randomNumeric;
 public class AVLPerf {
 
     protected AVLTree tree;
-    protected int size;
+    protected int numberOfRepeatTest;
     protected int[] inputInsert;
     protected int[] timeInsert;
     protected int[] inputDelete;
     protected int[] timeDelete;
 
-    public AVLPerf(){
+    public AVLPerf(int numRepeat, int startNum, int increment){
         this.tree = new AVLTree();
-        this.size = 10;
-        this.inputInsert = new int[size];
-        this.timeInsert = new int[size];
-        for(int i=0; i<size; ++i){
-            inputInsert[i] = Integer.parseInt(randomNumeric(7));
+        this.numberOfRepeatTest = numRepeat;
+        this.inputInsert = new int[numRepeat];
+        this.timeInsert = new int[numRepeat];
+
+        for(int i=0; i<numRepeat; ++i){
+            inputInsert[i] = startNum;
             timeInsert[i] = performanceInsertion(tree, inputInsert[i]);
+            startNum += increment;
         }
-        this.inputDelete = new int[size];
-        this.timeDelete = new int[size];
-        for(int i=0; i<size; ++i){
-            inputDelete[i] = Integer.parseInt(randomNumeric(7));
+        this.inputDelete = new int[numRepeat];
+        this.timeDelete = new int[numRepeat];
+        for(int i=0; i<numRepeat; ++i){
+            inputDelete[i] = startNum;
             timeDelete[i] = performanceDelete(tree, inputDelete[i]);
+            startNum += increment;
         }
-
-    }
-
-    public AVLPerf(int size, int legthOfInt){
-        this.tree = new AVLTree();
-        this.size = size;
-        this.inputInsert = new int[size];
-        this.timeInsert = new int[size];
-        for(int i=0; i<size; ++i){
-            inputInsert[i] = Integer.parseInt(randomNumeric(legthOfInt));
-            timeInsert[i] = performanceInsertion(tree, inputInsert[i]);
-        }
-        this.inputDelete = new int[size];
-        this.timeDelete = new int[size];
-        for(int i=0; i<size; ++i){
-            inputDelete[i] = Integer.parseInt(randomNumeric(legthOfInt));
-            timeDelete[i] = performanceDelete(tree, inputDelete[i]);
-        }
-
     }
 
     public static int performanceInsertion(AVLTree tree, int max) {
