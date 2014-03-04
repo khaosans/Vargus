@@ -1,6 +1,5 @@
 package com.sample.performance;
 
-import com.javafx.tools.doclets.formats.html.SourceToHTMLConverter;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartFrame;
 import org.jfree.chart.JFreeChart;
@@ -13,18 +12,16 @@ import org.jfree.ui.RectangleInsets;
 
 import java.awt.*;
 
-import static org.apache.commons.lang.RandomStringUtils.randomNumeric;
-
 public class Plot {
 
     public static void main(String[] args) {
 
         AVLPerf avl = new AVLPerf(10, 4);
 
-
         XYSeries series1 = new XYSeries("AVL");
-        for(int i=0; i<avl.size;++i)
+        for (int i = 0; i < avl.size; ++i){
             series1.add(avl.timeInsert[i], avl.inputInsert[i]);
+        }
 
         XYSeriesCollection xyDataset = new XYSeriesCollection();
         xyDataset.addSeries(series1);
