@@ -12,28 +12,31 @@ import java.util.List;
  * Created by souriyakhaosanga on 3/3/14.
  */
 public class Csv {
-    private static AVLPerf avlPerf;
+    private static AVLMetrics test;
 
     public static void main(String[] args) {
-        avlPerf = new AVLPerf(100, 1, 100);
-        outputFile("file", createString());
+        test = new AVLMetrics();
+        test.testOfInsertion(10000,100,50000);
+        String csv = createString(test);
+        outputFile("test",csv);
     }
 
-    public static String createString() {
-        String delimiter = ", ";
+    public static String createString(Metrics metrics) {
+        String delimiter = ",";
         String csv;
-        List<String> list1 = new LinkedList<String>();
-        for (int i = 0; i < avlPerf.numberOfRepeatTest; ++i) {
-            list1.add(String.valueOf(String.valueOf(avlPerf.inputInsert[i]) + delimiter + avlPerf.timeInsert[i]));
+        List<String> list = new LinkedList<String>();
+        for (int i = 0; i < metrics.numberOfElements.size(); ++i) {
+            list.add(String.valueOf(String.valueOf(metrics.getNumberOfElements().get(i)) +
+                    delimiter + String.valueOf(metrics.getTimeForOperation().get(i))));
         }
-        csv = Joiner.on("\n").join(list1);
+        csv = Joiner.on("\n").join(list);
         return csv;
     }
 
     public static void outputFile(String fileName, String input) {
         PrintWriter writer;
         try {
-            writer = new PrintWriter(fileName + ".txt", "UTF-8");
+            writer = new PrintWriter(fileName + ".csv", "UTF-8");
             writer.println(input);
             writer.close();
         } catch (FileNotFoundException e) {

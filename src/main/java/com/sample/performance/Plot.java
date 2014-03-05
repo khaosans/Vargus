@@ -12,17 +12,24 @@ import org.jfree.ui.RectangleInsets;
 
 import java.awt.*;
 
-import static java.lang.Math.log;
-
 public class Plot {
 
     public static void main(String[] args) {
+        test();
+        test();
+        test();
+        test();
 
-        AVLPerf avl = new AVLPerf(200, 0, 100);
+    }
+
+    public static void test(){
+        AVLMetrics avlMetrics = new AVLMetrics();
+
+        avlMetrics.testOfInsertion(10000,100,50000);
 
         XYSeries series1 = new XYSeries("AVL");
-        for (int i = 0; i < avl.numberOfRepeatTest; ++i){
-            series1.add(avl.inputInsert[i], avl.timeInsert[i]);
+        for (int i = 0; i < avlMetrics.numberOfElements.size(); ++i){
+            series1.add(avlMetrics.getNumberOfElements().get(i), avlMetrics.getTimeForOperation().get(i));
         }
 
         XYSeriesCollection xyDataset = new XYSeriesCollection();
