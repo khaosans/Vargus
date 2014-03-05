@@ -9,14 +9,9 @@ import static org.apache.commons.lang.RandomStringUtils.randomNumeric;
 /**
  * Created by solus on 3/1/14.
  */
-public class AVLPerf {
+public class AVLPerf extends Metrics{
 
-    protected AVLTree tree;
-    protected int numberOfRepeatTest;
-    protected int[] inputInsert;
-    protected int[] timeInsert;
-    protected int[] inputDelete;
-    protected int[] timeDelete;
+    private AVLTree tree;
 
     public AVLPerf(int numRepeat, int startNum, int increment){
         this.tree = new AVLTree();
@@ -41,14 +36,18 @@ public class AVLPerf {
     public static int performanceInsertion(AVLTree tree, int max) {
         Stack<Integer> stack1 = new Stack<Integer>();
         int number;
-        long startTime = System.currentTimeMillis();
+        long startTime;
+        long endTime;
+        long totalTime =0;
         for (int index = 0; index < max; ++index) {
             number = Integer.parseInt(randomNumeric(7));
             stack1.add(number);
+            startTime = System.currentTimeMillis();
             tree.insert(number);
+            endTime = System.currentTimeMillis();
+            totalTime+=(endTime-startTime);
         }
-        long endTime = System.currentTimeMillis();
-        return (int) (endTime - startTime);
+        return (int) totalTime;
     }
 
     public static int performanceDelete(AVLTree tree, int max) {
