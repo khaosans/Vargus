@@ -13,12 +13,19 @@ import java.util.List;
  */
 public class Csv {
     private static AVLMetrics test;
+    private static HashtableMetrics test1;
 
     public static void main(String[] args) {
         test = new AVLMetrics();
         test.testOfInsertion(10000,100,50000);
         String csv = createString(test);
         outputFile("test",csv);
+
+        test1 = new HashtableMetrics();
+        test1.testOfInsertion(0, 100, 5000);
+        String csv1 = createString(test1);
+        outputFile("test1", csv);
+
     }
 
     public static String createString(Metrics metrics) {

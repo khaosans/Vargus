@@ -13,6 +13,12 @@ public class HashTable {
             table[index] = null;
     }
 
+    public HashTable(int size) {
+        table = new LinkedList[size];
+        for (int index = 0; index < size; ++index)
+            table[index] = null;
+    }
+
     public void insert(int toAdd) {
         int index = toAdd % size;
         if (table[index] == null) {
