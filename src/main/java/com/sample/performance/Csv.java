@@ -12,20 +12,39 @@ import java.util.List;
  * Created by souriyakhaosanga on 3/3/14.
  */
 public class Csv {
-    private static AVLMetrics test;
-    private static HashtableMetrics test1;
+    private static AVLMetrics avlInsert, avlFind, avlDelete;
+    private static HashtableMetrics hashInsert, hashDelete, hashFound;
 
     public static void main(String[] args) {
-        test = new AVLMetrics();
-        test.testOfInsertion(10000,100,50000);
-        String csv = createString(test);
-        outputFile("test",csv);
+        avlInsert = new AVLMetrics();
+        avlInsert.testOfInsertion(10000, 100, 50000);
+        String csv = createString(avlInsert);
+        outputFile("AVLinsert", csv);
 
-        test1 = new HashtableMetrics();
-        test1.testOfInsertion(0, 100, 5000);
-        String csv1 = createString(test1);
-        outputFile("test1", csv);
+        avlDelete = new AVLMetrics();
+        avlDelete.testOfDeletions(10000, 100, 50000);
+        String csv1 = createString(avlDelete);
+        outputFile("AVL_delete",csv1);
 
+        avlFind = new AVLMetrics();
+        avlFind.testOfFounds(10000, 100, 50000);
+        String csv2 = createString(avlFind);
+        outputFile("AVL_find",csv2);
+
+        hashInsert = new HashtableMetrics();
+        hashInsert.testOfInsertion(100, 0, 100, 5000);
+        String csv4 = createString(hashInsert);
+        outputFile("Hashinsert", csv4);
+
+        hashDelete = new HashtableMetrics();
+        hashDelete.testOfDeletions(100, 0, 100, 5000);
+        String csv5 = createString(hashDelete);
+        outputFile("Hash_delete", csv5);
+
+        hashFound = new HashtableMetrics();
+        hashFound.testOfFound(100, 0, 100, 5000);
+        String csv6 = createString(hashFound);
+        outputFile("Hash_found", csv6);
     }
 
     public static String createString(Metrics metrics) {
@@ -43,7 +62,7 @@ public class Csv {
     public static void outputFile(String fileName, String input) {
         PrintWriter writer;
         try {
-            writer = new PrintWriter(fileName + ".csv", "UTF-8");
+            writer = new PrintWriter(fileName + ".txt", "UTF-8");
             writer.println(input);
             writer.close();
         } catch (FileNotFoundException e) {
