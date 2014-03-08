@@ -11,31 +11,36 @@ import org.jfree.data.xy.XYSeriesCollection;
 import org.jfree.ui.RectangleInsets;
 
 import java.awt.*;
+import java.util.Hashtable;
+
+import static org.apache.commons.lang.RandomStringUtils.randomNumeric;
 
 public class Plot {
-
     public static void main(String[] args) {
-        test();
-        test();
-        test();
-        test();
+    AVLMetrics avlMetrics = new AVLMetrics();
+    HashtableMetrics hashtable = new HashtableMetrics();
 
-    }
+    buildPlot(avlMetrics.testOfInsertion(0, 1000, 100000));
+    buildPlot(avlMetrics.testOfDeletions(0, 1000, 100000));
+    buildPlot(avlMetrics.testOfFounds(0, 1000, 100000));
+    buildPlot(hashtable.testOfInsertion(1000, 0, 100, 10000));
+    buildPlot(hashtable.testOfDeletions(1000, 0, 100, 10000));
+    buildPlot(hashtable.testOfFound(1000, 0, 100, 100000));
 
-    public static void test(){
-        AVLMetrics avlMetrics = new AVLMetrics();
+}
 
-        avlMetrics.testOfInsertion(10000,100,50000);
 
-        XYSeries series1 = new XYSeries("AVL");
-        for (int i = 0; i < avlMetrics.numberOfElements.size(); ++i){
-            series1.add(avlMetrics.getNumberOfElements().get(i), avlMetrics.getTimeForOperation().get(i));
+    public static void buildPlot(Metrics metrics){
+
+        XYSeries series1 = new XYSeries(Metrics.nameOfTest);
+        for (int i = 0; i < metrics.numberOfElements.size(); ++i){
+            series1.add(metrics.getNumberOfElements().get(i), metrics.getTimeForOperation().get(i));
         }
 
         XYSeriesCollection xyDataset = new XYSeriesCollection();
         xyDataset.addSeries(series1);
 
-        JFreeChart chart = ChartFactory.createXYLineChart("Times complexity", "Numbers", "Times", xyDataset, PlotOrientation.VERTICAL, true, false, false);
+        JFreeChart chart = ChartFactory.createXYLineChart("Times complexity of "+Metrics.typeOfTest, "Numbers", "Times", xyDataset, PlotOrientation.VERTICAL, true, false, false);
         chart.setBackgroundPaint(Color.yellow);
 
         XYPlot plot = (XYPlot) chart.getPlot();
@@ -53,5 +58,6 @@ public class Plot {
         ChartFrame frame = new ChartFrame("ChartFrame", chart);
         frame.setSize(4500, 2500);
         frame.setVisible(true);
+
     }
 }
