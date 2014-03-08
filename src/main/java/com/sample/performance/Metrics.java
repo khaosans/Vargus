@@ -8,6 +8,8 @@ import java.util.List;
 public class Metrics {
     protected List<Long> numberOfElements;
     protected List<Long> timeForOperation;
+    protected static String nameOfTest;
+    protected static String typeOfTest;
 
     public List<Long> getNumberOfElements(){
         return numberOfElements;

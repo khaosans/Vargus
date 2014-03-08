@@ -1,7 +1,6 @@
 package com.sample.performance;
 
 import com.sample.AVLTree;
-import com.sun.source.tree.BinaryTree;
 
 import java.util.LinkedList;
 import java.util.Stack;
@@ -21,10 +20,12 @@ public class AVLMetrics extends Metrics {
 
     public static void initializeTree() {
         tree = new AVLTree();
+        nameOfTest = "AVL test";
     }
 
     public static long avlInsertions(int numberOfInsertions) {
         initializeTree();
+        typeOfTest = "insertion";
         int number;
         long startTime;
         long endTime;
@@ -54,6 +55,7 @@ public class AVLMetrics extends Metrics {
 
     public static long avlDeletions(int numberOfDeletions) {
         initializeTree();
+        typeOfTest = "deletion";
         int number;
         long startTime;
         long endTime;
@@ -89,6 +91,7 @@ public class AVLMetrics extends Metrics {
 
     public static long avlFounds(int numberOfFound) {
         initializeTree();
+        typeOfTest = "found";
         int number;
         long startTime;
         long endTime;

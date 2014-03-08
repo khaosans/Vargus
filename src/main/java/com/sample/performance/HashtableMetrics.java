@@ -13,6 +13,8 @@ import static org.apache.commons.lang.RandomStringUtils.randomNumeric;
 public class HashtableMetrics extends Metrics{
     public static long hashtableInsertions(int size, int numberOfInsertions) {
         HashTable table = new HashTable(size);
+        nameOfTest = "Hastable";
+        typeOfTest = "Insertion";
         int number;
         long startTime;
         long endTime;
@@ -41,6 +43,8 @@ public class HashtableMetrics extends Metrics{
 
     public static long hashtableDeletions(int size, int numberOfDeletionss) {
         HashTable table = new HashTable(size);
+        nameOfTest = "Hastable";
+        typeOfTest = "Deletion";
         int number;
         long startTime;
         long endTime;
@@ -76,6 +80,8 @@ public class HashtableMetrics extends Metrics{
 
     public static long hashtableFound(int size, int numberOfDeletionss) {
         HashTable table = new HashTable(size);
+        nameOfTest = "Hastable";
+        typeOfTest = "Found";
         int number;
         long startTime;
         long endTime;
