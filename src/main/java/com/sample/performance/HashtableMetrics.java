@@ -21,10 +21,10 @@ public class HashtableMetrics extends Metrics{
         long totalTime = 0;
 
         for (int i = 0; i < numberOfInsertions; ++i) {
-            number = Integer.parseInt(randomNumeric(7));
-            startTime = System.currentTimeMillis();
+            number = Integer.parseInt(randomNumeric(4));
+            startTime = System.nanoTime();
             table.insert(number);
-            endTime = System.currentTimeMillis();
+            endTime = System.nanoTime();
             totalTime += (endTime - startTime);
         }
         return totalTime;
@@ -32,10 +32,12 @@ public class HashtableMetrics extends Metrics{
     public Metrics testOfInsertion(int size,int start, int increment, int end) {
         numberOfElements = new LinkedList<Long>();
         timeForOperation = new LinkedList<Long>();
-
+        float progress;
         while (start < end) {
             timeForOperation.add(hashtableInsertions(size, start));
             numberOfElements.add((long) start);
+            progress = (float) start / (float) end;
+            System.out.println(progress * 100);
             start += increment;
         }
         return this;
@@ -52,15 +54,15 @@ public class HashtableMetrics extends Metrics{
         Stack<Integer> stack = new Stack<Integer>();
 
         for (int i = 0; i < numberOfDeletionss; ++i) {
-            number = Integer.parseInt(randomNumeric(7));
+            number = Integer.parseInt(randomNumeric(4));
             stack.push(number);
             table.insert(number);
         }
 
         for (int i = 0; i < numberOfDeletionss; ++i) {
-            startTime = System.currentTimeMillis();
+            startTime = System.nanoTime();
             table.remove(stack.pop());
-            endTime = System.currentTimeMillis();
+            endTime = System.nanoTime();
             totalTime += (endTime - startTime);
         }
         return totalTime;
@@ -69,10 +71,13 @@ public class HashtableMetrics extends Metrics{
     public Metrics testOfDeletions(int size, int start, int increment, int end) {
         numberOfElements = new LinkedList<Long>();
         timeForOperation = new LinkedList<Long>();
+        float progress;
 
         while (start < end) {
             timeForOperation.add(hashtableDeletions(size, start));
             numberOfElements.add((long) start);
+            progress = (float) start / (float) end;
+            System.out.println(progress * 100);
             start += increment;
         }
         return this;
@@ -89,15 +94,15 @@ public class HashtableMetrics extends Metrics{
         Stack<Integer> stack = new Stack<Integer>();
 
         for (int i = 0; i < numberOfDeletionss; ++i) {
-            number = Integer.parseInt(randomNumeric(7));
+            number = Integer.parseInt(randomNumeric(4));
             stack.push(number);
             table.insert(number);
         }
 
         for (int i = 0; i < numberOfDeletionss; ++i) {
-            startTime = System.currentTimeMillis();
+            startTime = System.nanoTime();
             table.find(stack.pop());
-            endTime = System.currentTimeMillis();
+            endTime = System.nanoTime();
             totalTime += (endTime - startTime);
         }
         return totalTime;
@@ -106,10 +111,13 @@ public class HashtableMetrics extends Metrics{
     public Metrics testOfFound(int size, int start, int increment, int end) {
         numberOfElements = new LinkedList<Long>();
         timeForOperation = new LinkedList<Long>();
+        float progress;
 
         while (start < end) {
             timeForOperation.add(hashtableFound(size, start));
             numberOfElements.add((long) start);
+            progress = (float) start / (float) end;
+            System.out.println(progress * 100);
             start += increment;
         }
         return this;
