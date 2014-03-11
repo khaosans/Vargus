@@ -17,32 +17,32 @@ public class Csv {
 
     public static void main(String[] args) {
         avlInsert = new AVLMetrics();
-        avlInsert.testOfInsertion(10000, 100, 50000);
+        avlInsert.testOfInsertion(1, 10000, 1000001);
         String csv = createString(avlInsert);
         outputFile("AVLinsert", csv);
 
         avlDelete = new AVLMetrics();
-        avlDelete.testOfDeletions(10000, 100, 50000);
+        avlDelete.testOfDeletions(1, 10000, 1000001);
         String csv1 = createString(avlDelete);
         outputFile("AVL_delete",csv1);
 
         avlFind = new AVLMetrics();
-        avlFind.testOfFounds(10000, 100, 50000);
+        avlFind.testOfFounds(1, 10000, 1000001);
         String csv2 = createString(avlFind);
         outputFile("AVL_find",csv2);
 
         hashInsert = new HashtableMetrics();
-        hashInsert.testOfInsertion(100, 0, 100, 5000);
+        hashInsert.testOfInsertion(1000, 1, 1000, 35001);
         String csv4 = createString(hashInsert);
         outputFile("Hashinsert", csv4);
 
         hashDelete = new HashtableMetrics();
-        hashDelete.testOfDeletions(100, 0, 100, 5000);
+        hashDelete.testOfDeletions(1000, 1, 1000, 35001);
         String csv5 = createString(hashDelete);
         outputFile("Hash_delete", csv5);
 
         hashFound = new HashtableMetrics();
-        hashFound.testOfFound(100, 0, 100, 5000);
+        hashFound.testOfFound(1000, 1, 1000, 35001);
         String csv6 = createString(hashFound);
         outputFile("Hash_found", csv6);
     }
