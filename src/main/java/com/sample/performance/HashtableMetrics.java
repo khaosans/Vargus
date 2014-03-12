@@ -37,7 +37,7 @@ public class HashtableMetrics extends Metrics{
             timeForOperation.add(hashtableInsertions(size, start));
             numberOfElements.add((long) start);
             progress = (float) start / (float) end;
-            System.out.println(progress * 100);
+            System.out.println(nameOfTest+" "+typeOfTest+": "+progress * 100);
             start += increment;
         }
         return this;
@@ -77,7 +77,7 @@ public class HashtableMetrics extends Metrics{
             timeForOperation.add(hashtableDeletions(size, start));
             numberOfElements.add((long) start);
             progress = (float) start / (float) end;
-            System.out.println(progress * 100);
+            System.out.println(nameOfTest+" "+typeOfTest+": "+progress * 100);
             start += increment;
         }
         return this;
@@ -117,7 +117,7 @@ public class HashtableMetrics extends Metrics{
             timeForOperation.add(hashtableFound(size, start));
             numberOfElements.add((long) start);
             progress = (float) start / (float) end;
-            System.out.println(progress * 100);
+            System.out.println(nameOfTest+" "+typeOfTest+": "+progress * 100);
             start += increment;
         }
         return this;

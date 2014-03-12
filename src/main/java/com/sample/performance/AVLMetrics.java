@@ -49,7 +49,7 @@ public class AVLMetrics extends Metrics {
             timeForOperation.add(avlInsertions(start));
             numberOfElements.add((long) start);
             progress = (float) start / (float) end;
-            System.out.println(progress * 100);
+            System.out.println(nameOfTest+" "+typeOfTest+": "+progress * 100);
             start += increment;
         }
         return this;
@@ -87,7 +87,7 @@ public class AVLMetrics extends Metrics {
             timeForOperation.add(avlDeletions(start));
             numberOfElements.add((long) start);
             progress = (float) start / (float) end;
-            System.out.println(progress * 100);
+            System.out.println(nameOfTest+" "+typeOfTest+": "+progress * 100);
             start += increment;
         }
         return this;
@@ -125,7 +125,7 @@ public class AVLMetrics extends Metrics {
             timeForOperation.add(avlFounds(start));
             numberOfElements.add((long) start);
             progress = (float) start / (float) end;
-            System.out.println(progress * 100);
+            System.out.println(nameOfTest+" "+typeOfTest+": "+progress * 100);
             start += increment;
         }
         return this;

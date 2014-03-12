@@ -15,17 +15,56 @@ import java.util.Hashtable;
 
 import static org.apache.commons.lang.RandomStringUtils.randomNumeric;
 
-public class Plot {
+public class Plot extends Thread{
     public static void main(String[] args) {
-    AVLMetrics avlMetrics = new AVLMetrics();
-    HashtableMetrics hashtable = new HashtableMetrics();
 
-    buildPlot(avlMetrics.testOfInsertion(0, 1000, 100000));
-    buildPlot(avlMetrics.testOfDeletions(0, 1000, 100000));
-    buildPlot(avlMetrics.testOfFounds(0, 1000, 100000));
-    buildPlot(hashtable.testOfInsertion(1000, 0, 100, 10000));
-    buildPlot(hashtable.testOfDeletions(1000, 0, 100, 10000));
-    buildPlot(hashtable.testOfFound(1000, 0, 100, 100000));
+        final AVLMetrics avlMetrics1 = new AVLMetrics();
+        final AVLMetrics avlMetrics2 = new AVLMetrics();
+        final AVLMetrics avlMetrics3 = new AVLMetrics();
+
+        final HashtableMetrics hashtable1 = new HashtableMetrics();
+        final HashtableMetrics hashtable2 = new HashtableMetrics();
+        final HashtableMetrics hashtable3 = new HashtableMetrics();
+
+        Csv thread1 = new Csv() {
+            public void run() {
+                buildPlot(avlMetrics1.testOfInsertion(0, 1000, 100000));
+            }
+        };
+        Csv thread2 = new Csv() {
+            public void run() {
+                buildPlot(avlMetrics2.testOfDeletions(0, 1000, 100000));
+            }
+        };
+        Csv thread3 = new Csv() {
+            public void run() {
+                buildPlot(avlMetrics3.testOfDeletions(0, 1000, 100000));
+            }
+        };
+        Csv thread4 = new Csv(){
+            public void run() {
+                buildPlot(hashtable1.testOfInsertion(1000, 0, 100, 10000));
+            }
+
+        };
+        Csv thread5 = new Csv(){
+            public void run() {
+                buildPlot(hashtable2.testOfInsertion(1000, 0, 100, 10000));
+            }
+
+        };
+        Csv thread6 = new Csv(){
+            public void run() {
+                buildPlot(hashtable3.testOfInsertion(1000, 0, 100, 10000));
+            }
+        };
+
+        thread1.start();
+        thread2.start();
+        thread3.start();
+        thread4.start();
+        thread5.start();
+        thread6.start();
 
 }
 
