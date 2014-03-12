@@ -11,40 +11,68 @@ import java.util.List;
 /**
  * Created by souriyakhaosanga on 3/3/14.
  */
-public class Csv {
+public class Csv extends Thread {
     private static AVLMetrics avlInsert, avlFind, avlDelete;
     private static HashtableMetrics hashInsert, hashDelete, hashFound;
 
     public static void main(String[] args) {
-        avlInsert = new AVLMetrics();
-        avlInsert.testOfInsertion(1, 10000, 1000001);
-        String csv = createString(avlInsert);
-        outputFile("AVLinsert", csv);
+        Csv thread1 = new Csv() {
+            public void run() {
+                avlInsert = new AVLMetrics();
+                avlInsert.testOfInsertion(1, 10000, 1000001);
+                String csv = createString(avlInsert);
+                outputFile("AVLinsert", csv);
+            }
+        };
+        Csv thread2 = new Csv() {
+            public void run() {
+                avlDelete = new AVLMetrics();
+                avlDelete.testOfDeletions(1, 10000, 1000001);
+                String csv1 = createString(avlDelete);
+                outputFile("AVL_delete", csv1);
+            }
+        };
+        Csv thread3 = new Csv() {
+            public void run() {
+                avlFind = new AVLMetrics();
+                avlFind.testOfFounds(1, 10000, 1000001);
+                String csv2 = createString(avlFind);
+                outputFile("AVL_find", csv2);
+            }
+        };
+        Csv thread4 = new Csv(){
+            public void run() {
+                hashInsert = new HashtableMetrics();
+                hashInsert.testOfInsertion(100000, 1, 10000, 1000001);
+                String csv4 = createString(hashInsert);
+                outputFile("Hashinsert", csv4);
+            }
 
-        avlDelete = new AVLMetrics();
-        avlDelete.testOfDeletions(1, 10000, 1000001);
-        String csv1 = createString(avlDelete);
-        outputFile("AVL_delete",csv1);
+        };
+        Csv thread5 = new Csv(){
+            public void run() {
+                hashDelete = new HashtableMetrics();
+                hashDelete.testOfDeletions(1000, 1, 10000, 1000001);
+                String csv5 = createString(hashDelete);
+                outputFile("Hash_delete", csv5);
+            }
 
-        avlFind = new AVLMetrics();
-        avlFind.testOfFounds(1, 10000, 1000001);
-        String csv2 = createString(avlFind);
-        outputFile("AVL_find",csv2);
+        };
+        Csv thread6 = new Csv(){
+            public void run() {
+                hashFound = new HashtableMetrics();
+                hashFound.testOfFound(1000, 1, 10000, 1000001);
+                String csv6 = createString(hashFound);
+                outputFile("Hash_found", csv6);
+            }
+        };
 
-        hashInsert = new HashtableMetrics();
-        hashInsert.testOfInsertion(100000, 1, 10000, 1000001);
-        String csv4 = createString(hashInsert);
-        outputFile("Hashinsert", csv4);
-
-        hashDelete = new HashtableMetrics();
-        hashDelete.testOfDeletions(1000, 1, 10000, 1000001);
-        String csv5 = createString(hashDelete);
-        outputFile("Hash_delete", csv5);
-
-        hashFound = new HashtableMetrics();
-        hashFound.testOfFound(1000, 1, 10000, 1000001);
-        String csv6 = createString(hashFound);
-        outputFile("Hash_found", csv6);
+        thread1.start();
+        thread2.start();
+        thread3.start();
+        thread4.start();
+        thread5.start();
+        thread6.start();
     }
 
     public static String createString(Metrics metrics) {
