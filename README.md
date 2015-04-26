@@ -2,3 +2,5 @@
 <a href="http://capstonedd.cs.pdx.edu:8111/viewType.html?buildTypeId=Test_Testconfig&guest=1">
 <img src="http://capstonedd.cs.pdx.edu:8111/app/rest/builds/buildType:(id:Test_Testconfig)/statusIcon"/>
 </a>
+
+
